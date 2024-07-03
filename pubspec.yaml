@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  go_router: ^14.2.0
+  graphic: ^2.2.1
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +21,31 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/air-bnb.png
+    - assets/images/apple.png
+    - assets/images/arrow.png
+    - assets/images/card.png
+    - assets/images/credit-card.png
+    - assets/images/document.png
+    - assets/images/logo.png
+    - assets/images/main-card.png
+    - assets/images/netflix.png
+    - assets/images/nvidia.png
+    - assets/images/qr.png
+    - assets/images/visa-bkg.jpg
+    - assets/images/visa.png
+  
+  fonts:
+    - family: Space_Grotesk
+      fonts:
+        - asset: assets/fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf
+        - asset: assets/fonts/Space_Grotesk/SpaceGrotesk-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Space_Grotesk/SpaceGrotesk-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Space_Grotesk/SpaceGrotesk-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Space_Grotesk/SpaceGrotesk-Bold.ttf
+          weight: 700
