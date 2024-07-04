@@ -10,7 +10,8 @@ class AppConstants {
   // Padding
   static const double paddingSmall = 8.0;
   static const double paddingMedium = 16.0;
-  static const double paddingLarge = 32.0;
+  static const double paddingLarge = 24.0;
+  static const double paddingExtraLarge = 32.0;
 
   // Font Sizes
   static const double fontSizeSmall = 14.0;

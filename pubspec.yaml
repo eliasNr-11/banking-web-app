@@ -36,6 +36,7 @@ flutter:
     - assets/images/qr.png
     - assets/images/visa-bkg.jpg
     - assets/images/visa.png
+    - assets/images/user.jpeg
   
   fonts:
     - family: Space_Grotesk
