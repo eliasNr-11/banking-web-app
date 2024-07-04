@@ -1,5 +1,8 @@
 import 'package:banking_web_app/utils/constants.dart';
+import 'package:banking_web_app/views/widgets/currency_converter.dart';
+import 'package:banking_web_app/views/widgets/deposit.dart';
 import 'package:banking_web_app/views/widgets/large_desktop_appbar.dart';
+import 'package:banking_web_app/views/widgets/my_investments.dart';
 import 'package:flutter/material.dart';
 
 class VeryLargeDesktopLayout extends StatelessWidget {
@@ -10,7 +13,9 @@ class VeryLargeDesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: LargeDesktopAppBar(tabController: tabController,),
+      appBar: LargeDesktopAppBar(
+        tabController: tabController,
+      ),
       body: const Center(
         child: SizedBox(
           width: 1440,
@@ -38,15 +43,16 @@ class RegularDesktopLayout extends StatelessWidget {
         title: SizedBox(
           height: 56,
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: AppConstants.paddingLarge),
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppConstants.paddingLarge),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: AppConstants.paddingSmall),
+                    padding: const EdgeInsets.only(
+                        bottom: AppConstants.paddingSmall),
                     child: Row(
                       children: [
                         Image.asset(
@@ -94,11 +100,17 @@ class RegularDesktopLayout extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: AppConstants.paddingSmall),
+                    padding: const EdgeInsets.only(
+                        bottom: AppConstants.paddingSmall),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        const Text('Jon Doe', style: TextStyle(fontSize: AppConstants.bodyFontSmall, fontWeight: FontWeight.w500),),
+                        const Text(
+                          'Jon Doe',
+                          style: TextStyle(
+                              fontSize: AppConstants.bodyFontSmall,
+                              fontWeight: FontWeight.w500),
+                        ),
                         const SizedBox(width: AppConstants.paddingSmall),
                         ClipRRect(
                             borderRadius: BorderRadius.circular(100),
@@ -138,15 +150,16 @@ class SmallDesktopLayout extends StatelessWidget {
         title: SizedBox(
           height: 48,
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: AppConstants.paddingLarge),
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppConstants.paddingLarge),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: AppConstants.paddingSmall),
+                    padding: const EdgeInsets.only(
+                        bottom: AppConstants.paddingSmall),
                     child: Row(
                       children: [
                         Image.asset(
@@ -194,11 +207,17 @@ class SmallDesktopLayout extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: AppConstants.paddingSmall),
+                    padding: const EdgeInsets.only(
+                        bottom: AppConstants.paddingSmall),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        const Text('Jon Doe', style: TextStyle(fontSize: AppConstants.bodyFontSmall, fontWeight: FontWeight.w500),),
+                        const Text(
+                          'Jon Doe',
+                          style: TextStyle(
+                              fontSize: AppConstants.bodyFontSmall,
+                              fontWeight: FontWeight.w500),
+                        ),
                         const SizedBox(width: AppConstants.paddingSmall),
                         ClipRRect(
                             borderRadius: BorderRadius.circular(100),
@@ -216,7 +235,7 @@ class SmallDesktopLayout extends StatelessWidget {
           ),
         ),
       ),
-      body: DesktopLayout(layoutFontSize: 18),
+      body: const DesktopLayout(layoutFontSize: 18),
     );
   }
 }
@@ -252,16 +271,28 @@ class DesktopLayout extends StatelessWidget {
                         color: Colors.white, fontSize: layoutFontSize))),
           ),
         ),
-        Expanded(
+        const Expanded(
           flex: 3,
-          child: Container(
-            margin: const EdgeInsets.symmetric(
-                horizontal: AppConstants.paddingLarge),
-            color: Colors.blue,
-            child: Center(
-                child: Text('Last Column',
-                    style: TextStyle(
-                        color: Colors.white, fontSize: layoutFontSize))),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: AppConstants.paddingLarge,
+                vertical: AppConstants.paddingLarge),
+            child: Column(
+              children: [
+                Expanded(
+                  flex: 4,
+                  child: MyInvestments(),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Deposit(),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: CurrencyConverter(),
+                ),
+              ],
+            ),
           ),
         ),
       ],

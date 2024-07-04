@@ -5,7 +5,8 @@ class AppConstants {
   static const Color primaryColor = Color(0xFFFED403);
   static const Color secondaryColor = Color(0xFF212121);
   static const Color backgroundColor = Color(0xFFF2F4F6);
-  static const Color accentColor = Color(0xFF7B7B7B);
+  static const Color accentColor = Color(0xFFE4E4E4);
+  static const Color accentColorTwo = Color(0xFF7B7B7B);
 
   // Padding
   static const double paddingSmall = 8.0;
@@ -20,4 +21,7 @@ class AppConstants {
   static const double titleFontMedium = 18.0;
   static const double titleFontLarge = 20.0;
   static const double fontSizeLarge = 24.0;
+
+  // radius
+  static const double borderRadius = 20.0;
 }
