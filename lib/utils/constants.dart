@@ -14,7 +14,10 @@ class AppConstants {
   static const double paddingExtraLarge = 32.0;
 
   // Font Sizes
-  static const double fontSizeSmall = 14.0;
-  static const double fontSizeMedium = 18.0;
+  static const double bodyFontSmall = 14.0;
+  static const double bodyFontLarge = 16.0;
+  static const double titleFontSmall = 16.0;
+  static const double titleFontMedium = 18.0;
+  static const double titleFontLarge = 20.0;
   static const double fontSizeLarge = 24.0;
 }

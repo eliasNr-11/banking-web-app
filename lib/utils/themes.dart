@@ -9,8 +9,8 @@ class AppTheme {
       fontFamily: 'Space_Grotesk',
       textTheme: const TextTheme(
         bodyLarge: TextStyle(fontSize: AppConstants.fontSizeLarge),
-        bodyMedium: TextStyle(fontSize: AppConstants.fontSizeMedium),
-        bodySmall: TextStyle(fontSize: AppConstants.fontSizeSmall),
+        bodyMedium: TextStyle(fontSize: AppConstants.titleFontMedium),
+        bodySmall: TextStyle(fontSize: AppConstants.bodyFontSmall),
       ),
       buttonTheme: const ButtonThemeData(
         buttonColor: AppConstants.primaryColor,
@@ -26,8 +26,8 @@ class AppTheme {
       fontFamily: 'Space_Grotesk',
       textTheme: const TextTheme(
         bodyLarge: TextStyle(fontSize: AppConstants.fontSizeLarge),
-        bodyMedium: TextStyle(fontSize: AppConstants.fontSizeMedium),
-        bodySmall: TextStyle(fontSize: AppConstants.fontSizeSmall),
+        bodyMedium: TextStyle(fontSize: AppConstants.titleFontMedium),
+        bodySmall: TextStyle(fontSize: AppConstants.bodyFontSmall),
       ),
       buttonTheme: const ButtonThemeData(
         buttonColor: AppConstants.primaryColor,
