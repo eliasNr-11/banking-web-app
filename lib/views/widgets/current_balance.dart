@@ -58,7 +58,7 @@ class CurrentBalance extends StatelessWidget {
           ),
           const SizedBox(height: AppConstants.paddingSmall / 2),
           const Text(
-            '\$15092.45',
+            '\$15,092.45',
             style: TextStyle(
               fontSize: AppConstants.fontSizeLarge,
               fontWeight: FontWeight.bold,

@@ -2,10 +2,14 @@ import 'package:banking_web_app/utils/constants.dart';
 import 'package:banking_web_app/views/widgets/brokerage_account.dart';
 import 'package:banking_web_app/views/widgets/currency_converter.dart';
 import 'package:banking_web_app/views/widgets/current_balance.dart';
+import 'package:banking_web_app/views/widgets/custom_search.dart';
 import 'package:banking_web_app/views/widgets/deposit.dart';
+import 'package:banking_web_app/views/widgets/info_card.dart';
 import 'package:banking_web_app/views/widgets/large_desktop_appbar.dart';
 import 'package:banking_web_app/views/widgets/my_investments.dart';
+import 'package:banking_web_app/views/widgets/nav_cards.dart';
 import 'package:banking_web_app/views/widgets/real_estate_loan.dart';
+import 'package:banking_web_app/views/widgets/transactions.dart';
 import 'package:flutter/material.dart';
 
 class VeryLargeDesktopLayout extends StatelessWidget {
@@ -282,12 +286,26 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 4,
-          child: Container(
-            color: Colors.green,
-            child: Center(
-                child: Text('Middle Column',
-                    style: TextStyle(
-                        color: Colors.white, fontSize: layoutFontSize))),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: AppConstants.paddingLarge),
+            child: Column(
+                children: [
+                  CustomSearch(),
+                  const SizedBox(height: AppConstants.paddingMedium),
+                  Expanded(
+                    flex: 6,
+                    child: InfoCard(),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: NavCards(),
+                  ),
+                  Expanded(
+                    flex: 5,
+                    child: Transactions(),
+                  ),
+                ],
+              ),
           ),
         ),
         const Expanded(
