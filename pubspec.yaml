@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   go_router: ^14.2.0
   graphic: ^2.2.1
+  dotted_border: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -34,6 +35,7 @@ flutter:
     - assets/images/netflix.png
     - assets/images/nvidia.png
     - assets/images/qr.png
+    - assets/images/vip.png
     - assets/images/visa-bkg.jpg
     - assets/images/visa.png
     - assets/images/user.jpeg
