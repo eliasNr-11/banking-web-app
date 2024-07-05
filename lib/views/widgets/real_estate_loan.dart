@@ -1,0 +1,17 @@
+import 'package:banking_web_app/utils/constants.dart';
+import 'package:flutter/material.dart';
+
+class RealEstateLoan extends StatelessWidget {
+  const RealEstateLoan({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: AppConstants.paddingMedium),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(AppConstants.borderRadius)
+      ),
+    );
+  }
+}

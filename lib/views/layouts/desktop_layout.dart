@@ -1,8 +1,11 @@
 import 'package:banking_web_app/utils/constants.dart';
+import 'package:banking_web_app/views/widgets/brokerage_account.dart';
 import 'package:banking_web_app/views/widgets/currency_converter.dart';
+import 'package:banking_web_app/views/widgets/current_balance.dart';
 import 'package:banking_web_app/views/widgets/deposit.dart';
 import 'package:banking_web_app/views/widgets/large_desktop_appbar.dart';
 import 'package:banking_web_app/views/widgets/my_investments.dart';
+import 'package:banking_web_app/views/widgets/real_estate_loan.dart';
 import 'package:flutter/material.dart';
 
 class VeryLargeDesktopLayout extends StatelessWidget {
@@ -39,6 +42,8 @@ class RegularDesktopLayout extends StatelessWidget {
         centerTitle: false,
         elevation: 0.4,
         shadowColor: Colors.black,
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: AppConstants.backgroundColor,
         toolbarHeight: 56,
         title: SizedBox(
           height: 56,
@@ -146,6 +151,8 @@ class SmallDesktopLayout extends StatelessWidget {
         centerTitle: false,
         elevation: 0.4,
         shadowColor: Colors.black,
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: AppConstants.backgroundColor,
         toolbarHeight: 48,
         title: SizedBox(
           height: 48,
@@ -249,16 +256,28 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           flex: 3,
-          child: Container(
-            margin: const EdgeInsets.symmetric(
-                horizontal: AppConstants.paddingLarge),
-            color: Colors.indigo,
-            child: Center(
-                child: Text('First Column',
-                    style: TextStyle(
-                        color: Colors.white, fontSize: layoutFontSize))),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: AppConstants.paddingLarge,
+                vertical: AppConstants.paddingLarge),
+            child: Column(
+              children: [
+                Expanded(
+                  flex: 28,
+                  child: CurrentBalance(),
+                ),
+                Expanded(
+                  flex: 46,
+                  child: RealEstateLoan(),
+                ),
+                Expanded(
+                  flex: 22,
+                  child: BrokerageAccount(),
+                ),
+              ],
+            ),
           ),
         ),
         Expanded(

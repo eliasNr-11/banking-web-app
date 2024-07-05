@@ -14,6 +14,9 @@ class LargeDesktopAppBar extends StatelessWidget implements PreferredSizeWidget 
         alignment: Alignment.center,
         width: 1440,
         height: kToolbarHeight,
+        decoration: const BoxDecoration(
+          border: Border(bottom: BorderSide(width: 0.4, color: AppConstants.accentColor))
+        ),
         child: SizedBox(
           height: 56,
           child: Padding(
