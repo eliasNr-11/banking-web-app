@@ -40,6 +40,9 @@ flutter:
     - assets/images/visa.png
     - assets/images/user.jpeg
     - assets/images/search.png
+    - assets/images/rotate.png
+    - assets/images/credit.png
+    - assets/images/24-7.png
   
   fonts:
     - family: Space_Grotesk

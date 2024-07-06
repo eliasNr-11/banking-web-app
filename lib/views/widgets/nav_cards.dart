@@ -34,14 +34,28 @@ class NavCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-          horizontal: AppConstants.paddingLarge,
-          vertical: AppConstants.paddingMedium),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(AppConstants.borderRadius),
-      ),
+    return Stack(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(
+              horizontal: AppConstants.paddingLarge,
+              vertical: AppConstants.paddingMedium),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(AppConstants.borderRadius),
+          ),
+        ),
+        Positioned(
+          right: -25,
+          top: -25,
+          child: Image.asset(
+            "assets/images/document.png",
+            color: AppConstants.accentColor,
+            height: 100,
+            width: 100,
+          ),
+        )
+      ],
     );
   }
 }

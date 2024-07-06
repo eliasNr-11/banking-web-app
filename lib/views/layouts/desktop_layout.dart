@@ -258,9 +258,9 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        const Expanded(
+        Expanded(
           flex: 3,
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -287,28 +287,28 @@ class DesktopLayout extends StatelessWidget {
         Expanded(
           flex: 4,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: AppConstants.paddingLarge),
+            padding: EdgeInsets.symmetric(vertical: AppConstants.paddingLarge),
             child: Column(
                 children: [
                   CustomSearch(),
-                  const SizedBox(height: AppConstants.paddingMedium),
+                  SizedBox(height: AppConstants.paddingMedium),
                   Expanded(
-                    flex: 6,
+                    flex: 8,
                     child: InfoCard(),
                   ),
                   Expanded(
-                    flex: 4,
+                    flex: 5,
                     child: NavCards(),
                   ),
                   Expanded(
-                    flex: 5,
+                    flex: 6,
                     child: Transactions(),
                   ),
                 ],
               ),
           ),
         ),
-        const Expanded(
+        Expanded(
           flex: 3,
           child: Padding(
             padding: EdgeInsets.symmetric(
