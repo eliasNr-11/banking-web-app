@@ -28,6 +28,7 @@ flutter:
     - assets/images/apple.png
     - assets/images/arrow.png
     - assets/images/card.png
+    - assets/images/cvv-card.png
     - assets/images/credit-card.png
     - assets/images/document.png
     - assets/images/logo.png

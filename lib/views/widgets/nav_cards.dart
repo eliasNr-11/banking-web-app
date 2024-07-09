@@ -6,20 +6,29 @@ class NavCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.symmetric(vertical: AppConstants.paddingMedium),
       child: Row(
         children: [
           Expanded(
-            child: NavCard(),
+            child: NavCard(
+              icn: 'assets/images/document.png',
+              name: 'By details',
+            ),
           ),
           SizedBox(width: AppConstants.paddingMedium),
           Expanded(
-            child: NavCard(),
+            child: NavCard(
+              icn: 'assets/images/cvv-card.png',
+              name: 'Card number',
+            ),
           ),
           SizedBox(width: AppConstants.paddingMedium),
           Expanded(
-            child: NavCard(),
+            child: NavCard(
+              icn: 'assets/images/qr.png',
+              name: 'QR scanner',
+            ),
           ),
         ],
       ),
@@ -29,8 +38,11 @@ class NavCards extends StatelessWidget {
 
 class NavCard extends StatelessWidget {
   const NavCard({
-    super.key,
+    super.key, required this.icn, required this.name,
   });
+
+  final String icn;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -48,10 +60,10 @@ class NavCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: -25,
-            top: -40,
+            right: -40,
+            top: -36,
             child: Image.asset(
-              "assets/images/document.png",
+              icn,
               color: AppConstants.accentColor,
               height: 100,
               width: 100,
@@ -71,7 +83,7 @@ class NavCard extends StatelessWidget {
                       color: Color(0xFFE8E8E8),
                     ),
                     child: Image.asset(
-                      'assets/images/document.png',
+                      icn,
                       height: AppConstants.bodyFontLarge,
                       width: AppConstants.bodyFontLarge,
                     ),
@@ -79,15 +91,15 @@ class NavCard extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          'By details',
-                          style: TextStyle(fontSize: AppConstants.bodyFontSmall),
+                        Text(
+                          name,
+                          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
                         ),
-                        const SizedBox(width: AppConstants.paddingSmall / 2),
+                        // const SizedBox(width: AppConstants.paddingSmall / 2), 
                         Image.asset(
                           'assets/images/arrow.png',
-                          height: AppConstants.bodyFontSmall,
-                          width: AppConstants.bodyFontSmall,
+                          height: 12,
+                          width: 12,
                         )
                       ],
                     )
