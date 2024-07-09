@@ -34,28 +34,68 @@ class NavCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          padding: const EdgeInsets.symmetric(
-              horizontal: AppConstants.paddingLarge,
-              vertical: AppConstants.paddingMedium),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(AppConstants.borderRadius),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(AppConstants.borderRadius),
+      child: Stack(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppConstants.paddingLarge,
+                vertical: AppConstants.paddingMedium),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(AppConstants.borderRadius),
+            ),
           ),
-        ),
-        Positioned(
-          right: -25,
-          top: -25,
-          child: Image.asset(
-            "assets/images/document.png",
-            color: AppConstants.accentColor,
-            height: 100,
-            width: 100,
+          Positioned(
+            right: -25,
+            top: -40,
+            child: Image.asset(
+              "assets/images/document.png",
+              color: AppConstants.accentColor,
+              height: 100,
+              width: 100,
+            ),
           ),
-        )
-      ],
+          Positioned.fill(
+              child: Padding(
+                padding: const EdgeInsets.all(AppConstants.paddingMedium),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                    padding: const EdgeInsets.all(AppConstants.paddingSmall),
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFFE8E8E8),
+                    ),
+                    child: Image.asset(
+                      'assets/images/document.png',
+                      height: AppConstants.bodyFontLarge,
+                      width: AppConstants.bodyFontLarge,
+                    ),
+                  ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          'By details',
+                          style: TextStyle(fontSize: AppConstants.bodyFontSmall),
+                        ),
+                        const SizedBox(width: AppConstants.paddingSmall / 2),
+                        Image.asset(
+                          'assets/images/arrow.png',
+                          height: AppConstants.bodyFontSmall,
+                          width: AppConstants.bodyFontSmall,
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ))
+        ],
+      ),
     );
   }
 }
