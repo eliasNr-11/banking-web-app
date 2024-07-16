@@ -25,7 +25,7 @@ class VeryLargeDesktopLayout extends StatelessWidget {
       ),
       body: const Center(
         child: SizedBox(
-          width: 1440,
+          width: 1280,
           child: DesktopLayout(layoutFontSize: 20),
         ),
       ),
@@ -48,9 +48,9 @@ class RegularDesktopLayout extends StatelessWidget {
         shadowColor: Colors.black,
         surfaceTintColor: Colors.transparent,
         backgroundColor: AppConstants.backgroundColor,
-        toolbarHeight: 56,
+        toolbarHeight: 48,
         title: SizedBox(
-          height: 56,
+          height: 48,
           child: Padding(
             padding: const EdgeInsets.symmetric(
                 horizontal: AppConstants.paddingLarge),
@@ -59,6 +59,7 @@ class RegularDesktopLayout extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
+                  flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.only(
                         bottom: AppConstants.paddingSmall),
@@ -83,7 +84,7 @@ class RegularDesktopLayout extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 5,
                   child: TabBar(
                     controller: tabController,
                     indicatorColor: AppConstants.secondaryColor,
@@ -108,6 +109,7 @@ class RegularDesktopLayout extends StatelessWidget {
                   ),
                 ),
                 Expanded(
+                  flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.only(
                         bottom: AppConstants.paddingSmall),
@@ -168,6 +170,7 @@ class SmallDesktopLayout extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
+                  flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.only(
                         bottom: AppConstants.paddingSmall),
@@ -192,7 +195,7 @@ class SmallDesktopLayout extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  flex: 3,
+                  flex: 5,
                   child: TabBar(
                     controller: tabController,
                     indicatorColor: AppConstants.secondaryColor,
@@ -217,6 +220,7 @@ class SmallDesktopLayout extends StatelessWidget {
                   ),
                 ),
                 Expanded(
+                  flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.only(
                         bottom: AppConstants.paddingSmall),
@@ -293,7 +297,7 @@ class DesktopLayout extends StatelessWidget {
                   CustomSearch(),
                   SizedBox(height: AppConstants.paddingMedium),
                   Expanded(
-                    flex: 8,
+                    flex: 9,
                     child: InfoCard(),
                   ),
                   Expanded(

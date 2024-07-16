@@ -30,7 +30,7 @@ class CurrencyConverter extends StatelessWidget {
           const SizedBox(height: AppConstants.paddingMedium),
           exchange('Exchange from', '\$3,215.00', 'USD'),
           const SizedBox(height: AppConstants.paddingSmall),
-          exchange('To', '£2,528.71', 'GBP'),
+          exchange('To', '£2,488.71', 'GBP'),
         ],
       ),
     );

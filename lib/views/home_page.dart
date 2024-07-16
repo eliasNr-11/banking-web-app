@@ -29,11 +29,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
 
-    if (screenWidth > 1440) {
+    if (screenWidth > 1280) {
       return VeryLargeDesktopLayout(tabController: _tabController);
     } else if (screenWidth > 1200) {
       return RegularDesktopLayout(tabController: _tabController);
-    } else if (screenWidth > 992) {
+    } else if (screenWidth > 1024) {
       return SmallDesktopLayout(tabController: _tabController);
     } else if (screenWidth > 768) {
       return TabletLayout(tabController: _tabController);

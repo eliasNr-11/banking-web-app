@@ -1,7 +1,8 @@
 import 'package:banking_web_app/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-class LargeDesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
+class LargeDesktopAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   const LargeDesktopAppBar({super.key, required this.tabController});
 
   final TabController tabController;
@@ -12,23 +13,26 @@ class LargeDesktopAppBar extends StatelessWidget implements PreferredSizeWidget 
       alignment: Alignment.center,
       child: Container(
         alignment: Alignment.center,
-        width: 1440,
-        height: kToolbarHeight,
+        width: 1280,
+        height: 48,
         decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(width: 0.4, color: AppConstants.accentColor))
-        ),
+            border: Border(
+                bottom:
+                    BorderSide(width: 0.2, color: AppConstants.accentColorTwo))),
         child: SizedBox(
-          height: 56,
+          height: 48,
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: AppConstants.paddingLarge),
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppConstants.paddingLarge),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
+                  flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: AppConstants.paddingSmall),
+                    padding: const EdgeInsets.only(
+                        bottom: AppConstants.paddingSmall),
                     child: Row(
                       children: [
                         Image.asset(
@@ -50,7 +54,7 @@ class LargeDesktopAppBar extends StatelessWidget implements PreferredSizeWidget 
                   ),
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 5,
                   child: TabBar(
                     controller: tabController,
                     indicatorColor: AppConstants.secondaryColor,
@@ -75,20 +79,28 @@ class LargeDesktopAppBar extends StatelessWidget implements PreferredSizeWidget 
                   ),
                 ),
                 Expanded(
+                  flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.only(bottom: AppConstants.paddingSmall),
+                    padding: const EdgeInsets.only(
+                        bottom: AppConstants.paddingSmall),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        const Text('Jon Doe', style: TextStyle(fontSize: AppConstants.bodyFontSmall, fontWeight: FontWeight.w500),),
+                        const Text(
+                          'Jon Doe',
+                          style: TextStyle(
+                              fontSize: AppConstants.bodyFontSmall,
+                              fontWeight: FontWeight.w500),
+                        ),
                         const SizedBox(width: AppConstants.paddingSmall),
                         ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
-                            child: Image.asset(
-                              'assets/images/user.jpeg',
-                              height: 32,
-                              width: 32,
-                            )),
+                          borderRadius: BorderRadius.circular(100),
+                          child: Image.asset(
+                            'assets/images/user.jpeg',
+                            height: 32,
+                            width: 32,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -102,5 +114,5 @@ class LargeDesktopAppBar extends StatelessWidget implements PreferredSizeWidget 
   }
 
   @override
-  Size get preferredSize => const Size(1440, kToolbarHeight);
+  Size get preferredSize => const Size(1280, 48);
 }

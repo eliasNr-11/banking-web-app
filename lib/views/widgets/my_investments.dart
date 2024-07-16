@@ -52,7 +52,7 @@ class MyInvestments extends StatelessWidget {
           const SizedBox(height: AppConstants.paddingMedium),
           companies('assets/images/netflix.png', 'Netflix', -4.96),
           const SizedBox(height: AppConstants.paddingMedium),
-          companies('assets/images/air-bnb.png', 'Airbnb', -0.52),
+          companies('assets/images/air-bnb.png', 'Airbnb', -0.48),
           const SizedBox(height: AppConstants.paddingMedium),
           companies('assets/images/nvidia.png', 'Nvidia', 24.64),
         ],
