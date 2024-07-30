@@ -187,7 +187,7 @@ class SmallDesktopLayout extends StatelessWidget {
                         const Text(
                           'LINES BANK',
                           style: TextStyle(
-                              fontSize: AppConstants.bodyFontSmall,
+                              fontSize: AppConstants.bodyFontLarge,
                               fontWeight: FontWeight.w500),
                         )
                       ],
