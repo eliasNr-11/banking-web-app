@@ -17,7 +17,7 @@ class CustomSearch extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text('Search', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),),
+          const Text('Search', style: TextStyle(fontSize: 12, color: Colors.grey,),),
           Image.asset('assets/images/search.png', height: 20, width: 20),
         ],
       ),
